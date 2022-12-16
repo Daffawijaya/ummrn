@@ -37,8 +37,7 @@ export default function Profil() {
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Teaching Experinces:</h1>
                                         <div>
-                                            <p>Database Design</p>
-                                            <p>Software Engineering</p>
+                                            <p>How to Survive</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
@@ -51,20 +50,18 @@ export default function Profil() {
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Skills:</h1>
                                         <div>
-                                            <p>Frontend Web Developer</p>
-                                            <p>Javascript</p>
+                                            <p>CSS</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Awards:</h1>
                                         <div>
-                                            <p>Juara 1 Wanita Tercantik</p>
+                                            <p>-</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Topics of Research:</h1>
                                         <div>
-                                            <p>Project Management</p>
                                             <p>UI/UX Design</p>
                                         </div>
                                     </div>

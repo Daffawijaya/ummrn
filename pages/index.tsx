@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import NavbarLandingPage from '../components/NavbarLandingPage'
-import { useState } from 'react'
 import Search from '../components/Search';
 
 export default function Home() {
-  const [isAuth, setIsAuth] = useState(false);
+
   return (
     <>
       <Head>
         <title>UMMRN | Home</title>
+        <link rel="icon" href="/polri.png" />
       </Head>
       <div className="z-0 fixed h-screen w-screen bg-[url('/background.jpg')] bg-cover">
         <div className='bg-black h-full w-full opacity-60' />

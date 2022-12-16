@@ -60,6 +60,7 @@ export default function CallForProjects() {
     <>
       <Head>
         <title>UMMRN | Call for Projects</title>
+        <link rel="icon" href="/polri.png" />
       </Head>
 
       <div className="min-h-screen min-w-screen flex flex-col">

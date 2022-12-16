@@ -35,7 +35,7 @@ const Navbar = () => {
         <>
             <nav className="bg-primary px-4 sm:px-4 py-4 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 overflow-hidden">
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
-                    <a href="https://www.umm.ac.id/" className="flex items-center h-10">
+                    <a href="https://www.umm.ac.id/" className="flex items-center h-10 mr-24">
                         <Image alt='anjay' src={'/logo-umm_1.png'} height={800} width={800} className="hover:translate-x-1 duration-300 w-full h-full" />
                     </a>
                     <div className="flex md:order-2 items-center space-x-4">

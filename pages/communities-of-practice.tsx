@@ -108,6 +108,7 @@ export default function CommunitiesofPractice() {
     <>
       <Head>
         <title>UMMRN | Communities of Practice</title>
+        <link rel="icon" href="/polri.png" />
       </Head>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">

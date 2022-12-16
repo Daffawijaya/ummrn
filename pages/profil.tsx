@@ -2,12 +2,14 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import { BsFillPencilFill } from "react-icons/bs";
 
 export default function Profil() {
     return (
         <>
             <Head>
                 <title>UMMRN | Profil</title>
+                <link rel="icon" href="/polri.png" />
             </Head>
 
             <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
@@ -21,12 +23,23 @@ export default function Profil() {
                             <div className='flex md:flex-row flex-col md:space-x-10 space-y-2 md:text-start text-center'>
                                 <div className='w-full md: w-auto justify-center flex'>
                                     <div className='rounded-full overflow-hidden h-[200px] w-[200px] min-h-[200px] min-w-[200px] mb-3'>
-                                        <Image alt='anjay' src={`/cindy.jpeg`} height={1000} width={1000} className="w-full h-full duration-300" />
+                                        <div className='flex justify-end items-end'>
+                                            <div className='absolute p-3 bg-white rounded-full bg-white hover:bg-secondary-2 duration-300 shadow-md hover:text-white'><BsFillPencilFill className='h-5 w-5' /></div>
+                                            <Image alt='anjay' src={`/cindy.jpeg`} height={1000} width={1000} className="w-full h-full duration-300" />
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div className='space-y-4'>
-                                    <h2 className='text-2xl font-bold text-gray-800 text-center md:text-start'>Cindy Patika Sari</h2>
+                                    <div className='flex flex-row items-center text-center md:text-start space-x-4 w-full'>
+                                        <h2 className='text-2xl font-bold text-gray-800 text-center md:text-start w-full md:w-auto'>Cindy Patika Sari</h2>
+                                        <button
+                                            type="submit"
+                                            className="md:block hidden hover:scale-[101%] duration-300 text-white bg-secondary-2 px-3 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                        >
+                                            Edit Profil
+                                        </button>
+                                    </div>
                                     <div className='space-y-1 md:w-auto w-full'>
                                         <h1 className='text-lg font-bold text-gray-800'>Education:</h1>
                                         <div>
@@ -58,7 +71,7 @@ export default function Profil() {
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Awards:</h1>
                                         <div>
-                                            <p>Juara 1 Wanita Tercantik</p>
+                                            <p>-</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
@@ -75,11 +88,14 @@ export default function Profil() {
                                             <p>[2] I. Nuryasin, “Model Communities of Practice (CoP) Pada Kelas Paralel di Jurusan Teknik Informatika, Universitas Muhammadmiyah Malang,” Semin. Nas. Teknol. dan Rekayasa, vol. 2, pp. v78–v82, 2016.</p>
                                         </div>
                                     </div>
+                                    <button
+                                        type="submit"
+                                        className="md:hidden hover:scale-[101%] duration-300 text-white bg-secondary-2 px-3 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                    >
+                                        Edit Profil
+                                    </button>
                                 </div>
-
-
                             </div>
-
                         </div>
                     </div>
                 </div>

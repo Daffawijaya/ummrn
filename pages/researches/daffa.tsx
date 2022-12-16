@@ -44,8 +44,8 @@ export default function Profil() {
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Organization Experinces:</h1>
                                         <div>
-                                            <p>SEAL AWS Internship</p>
-                                            <p>Koodinator Kominfo Ikasti</p>
+                                            <p>Frontend Developer SEAL AWS Internship</p>
+                                            <p>Kominfo Ikasti</p>
                                             <p>Nathcofer</p>
                                         </div>
                                     </div>
@@ -53,12 +53,17 @@ export default function Profil() {
                                         <h1 className='text-lg font-bold text-gray-800'>Skills:</h1>
                                         <div>
                                             <p>Javascript</p>
-                                            <p>Next JS Typescript</p>
+                                            <p>Typescript</p>
+                                            <p>Next JS</p>
                                             <p>React JS</p>
+                                            <p>HTML</p>
+                                            <p>CSS</p>
                                             <p>Tailwind</p>
+                                            <p>Chakra UI</p>
+                                            <p>Bootstrap</p>
                                             <p>Coreldraw</p>
                                             <p>Photoshop</p>
-                                            <p>Adobe Premiere Pro</p>
+                                            <p>Premiere Pro</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>

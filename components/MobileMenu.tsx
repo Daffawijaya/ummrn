@@ -43,16 +43,16 @@ const MobileMenu = () => {
 
                 {showOptions && (
                     <div onClick={handleClick} className="w-full h-full inset-0 fixed">
-                        <div onClick={(event) => event.stopPropagation()} className="overflow-hidden absolute top-16 bg-primary w-full flex flex-col py-3 rounded-lg">
+                        <div onClick={(event) => event.stopPropagation()} className="overflow-hidden absolute top-16 bg-primary w-full flex flex-col pt-3 pb-6 rounded-lg">
                             {menu.map((menu: any, idx: number) => (
-                                <div key={idx}>
+                                <div key={idx} className="container mx-auto px-4 sm:px-4">
                                     <Link href={menu.url}>
                                         <button className={`text-sm capitalize hover:text-secondary-2 duration-300 hover:scale-105 block
                                         ${router.pathname === menu.url
                                                 ? "text-secondary-2 scale-105"
                                                 : "text-white"}
                                     `}>
-                                            <p className="text-start capitalize hover:translate-x-1 duration-300 w-full h-full py-2 px-4 hover:text-secondary-2">
+                                            <p className="text-start capitalize hover:translate-x-1 duration-300 w-full h-full py-2 hover:text-secondary-2">
                                                 {menu.title}
                                             </p>
                                         </button>

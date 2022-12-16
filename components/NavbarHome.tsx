@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Link from 'next/link'
 import ProfileMenu from './ProfileMenu';
 import MobileMenu from './MobileMenu';
+import Notification from './Notification';
 
 const menu = [
     {
@@ -36,10 +37,12 @@ const NavbarHome = () => {
             <nav className="bg-primary md:bg-transparent px-4 sm:px-4 py-4 dark:bg-gray-900 fixed w-full z-20 top-0 left-0">
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <button className="flex items-center h-10">
-                        <Image alt='anjay' src={'/logo-umm_1.png'} height={800} width={800} className="hover:translate-x-1 duration-300 w-full h-full" />
+                        <Image alt='anjay' src={'/logo-umm_1.png'} height={800} width={800} className="mr-24 hover:translate-x-1 duration-300 w-full h-full" />
                     </button>
-                    <div className="flex md:order-2 items-center space-x-2">
+                    <div className="flex md:order-2 items-center space-x-4">
+                        <Notification />
                         <ProfileMenu />
+
                         <div className='md:hidden'>
                             <MobileMenu />
                         </div>

@@ -9,6 +9,7 @@ export default function Home() {
     <>
       <Head>
         <title>UMMRN | Home</title>
+        <link rel="icon" href="/polri.png" />
       </Head>
       <div className="z-0 fixed h-screen w-screen bg-[url('/background.jpg')] bg-cover">
         <div className='bg-black h-full w-full opacity-60' />
