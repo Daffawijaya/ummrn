@@ -58,7 +58,7 @@ export default function Login() {
                                         id="remember"
                                         type="checkbox"
                                         value=""
-                                        className="text-primary hover:scale-110 duration-300 w-3 h-3 sm:w-4 sm:h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                                        className="text-secondary-2 hover:scale-110 duration-300 w-3 h-3 sm:w-4 sm:h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-secondary-2 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
                                     />
                                     <label
                                         htmlFor="remember"
@@ -85,6 +85,18 @@ export default function Login() {
                                     <button className='duration-300 hover:scale-105 text-secondary-2 hover:text-secondary-3 hover:underline ml-1'> Daftar Disini</button>
                                 </Link>
                             </div>
+                            <p className="flex items-center h-[33px] w-full my-2">
+                                <Image alt='anjay' src={'/divider.png'} height={1000} width={1000} className="w-full h-full" />
+                            </p>
+                            <button
+                                type="submit"
+                                className="flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                            >
+                                <p className="flex items-center h-5">
+                                    <Image alt='anjay' src={'/google.png'} height={1000} width={1000} className="w-full h-full" />
+                                </p>
+                                <p>Masuk dengan Webmail UMM</p>
+                            </button>
 
                         </div>
                     </div>
