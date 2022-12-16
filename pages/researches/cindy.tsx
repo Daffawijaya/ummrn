@@ -59,7 +59,7 @@ export default function Profil() {
                                     <div className='space-y-1'>
                                         <h1 className='text-lg font-bold text-gray-800'>Awards:</h1>
                                         <div>
-                                            <p>-</p>
+                                            <p>Wanita Tercantik Bagi Saya</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
