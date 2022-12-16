@@ -2,53 +2,7 @@ import Head from 'next/head'
 import Footer from '../components/Footer'
 import NavbarHome from '../components/NavbarHome'
 import { FaStarOfLife } from "react-icons/fa";
-
-const data = [
-    {
-        title: "Laporan di minggu 05-09 September 2022 telah disetujui mentor. Yay, bisa santai sejenak!",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "TLaporan di minggu 05-09 September 2022 telah disetujui mentor. Yay, bisa santai sejenak!",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-    {
-        title: "Testing of Communities of Practice in Paralel Class",
-        time: "22 May 2022, 13.02",
-    },
-]
+import { dataNotification } from '../data/data';
 
 export default function Notification() {
 
@@ -70,7 +24,7 @@ export default function Notification() {
                             <button className=' font-medium text-secondary-2 hover:text-secondary-3 hover:scale-105  duration-300'>Baca Semua</button>
                         </div>
                         <div className=' divide-y w-full'>
-                            {data.map((user: any, idx: number) => (
+                            {dataNotification.map((user: any, idx: number) => (
                                 <div key={idx} className=' w-full rounded-md  flex flex-row space-x-2 items-center overflow-hidden hover:bg-blue-100 bg-white duration-300'>
                                     <div className='flex-row flex items-center space-x-2 hover:translate-x-1 duration-300 duration-300  py-5 px-8 w-full'>
                                         <p className='justify-start flex-col align-start h-full flex items-start'><FaStarOfLife className='' /></p>

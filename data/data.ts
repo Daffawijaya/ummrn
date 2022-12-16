@@ -1,3 +1,50 @@
+export const dataNotification = [
+  {
+      title: "Laporan di minggu 05-09 September 2022 telah disetujui mentor. Yay, bisa santai sejenak!",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "TLaporan di minggu 05-09 September 2022 telah disetujui mentor. Yay, bisa santai sejenak!",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+  {
+      title: "Testing of Communities of Practice in Paralel Class",
+      time: "22 May 2022, 13.02",
+  },
+]
+
 export const dataCall = [
     {
       title: "Testing of Communities of Practice in Paralel Class",
