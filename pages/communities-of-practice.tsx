@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Search from '../components/Search'
+import { useState } from 'react';
+import NavbarHome from '../components/NavbarHome'
 
 const data = [
   {
@@ -12,11 +13,9 @@ const data = [
     author: "Daffa Wijaya",
     member: [
       {
-        id: 1,
         name: "Cindy Patika Sari"
       },
       {
-        id: 2,
         name: "Dafa Yan Wijaya"
       }
     ]
@@ -28,11 +27,9 @@ const data = [
     author: "Cindy Patika Sari",
     member: [
       {
-        id: 1,
         name: "Cindy Patika Sari"
       },
       {
-        id: 2,
         name: "Dafa Yan Wijaya"
       }
     ]
@@ -44,11 +41,9 @@ const data = [
     author: "Daffa Wijaya",
     member: [
       {
-        id: 1,
         name: "Cindy Patika Sari"
       },
       {
-        id: 2,
         name: "Dafa Yan Wijaya"
       }
     ]
@@ -60,11 +55,9 @@ const data = [
     author: "Daffa Wijaya",
     member: [
       {
-        id: 1,
         name: "Cindy Patika Sari"
       },
       {
-        id: 2,
         name: "Dafa Yan Wijaya"
       }
     ]
@@ -76,11 +69,9 @@ const data = [
     author: "Cindy Patika Sari",
     member: [
       {
-        id: 1,
         name: "Cindy Patika Sari"
       },
       {
-        id: 2,
         name: "Dafa Yan Wijaya"
       }
     ]
@@ -92,11 +83,9 @@ const data = [
     author: "Daffa Wijaya",
     member: [
       {
-        id: 1,
         name: "Cindy Patika Sari"
       },
       {
-        id: 2,
         name: "Dafa Yan Wijaya"
       }
     ]
@@ -104,6 +93,9 @@ const data = [
 ]
 
 export default function CommunitiesofPractice() {
+
+  const [search, setSearch] = useState("")
+
   return (
     <>
       <Head>
@@ -112,29 +104,34 @@ export default function CommunitiesofPractice() {
       </Head>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
-        <Navbar />
+        <NavbarHome />
 
         {/* content */}
-        <div className='flex flex-col items-center pt-24'>
-          <div className='px-[15%] pt-8 divide-y w-full'>
-            <h1 className='text-3xl font-bold pb-5 text-gray-800 text-center'>Communities of Practice</h1>
-            <div className='pt-4'>
+        <div className='flex flex-col items-center justify-center lg:pt-[140px] pt-[80px]'>
+          <div className='w-full'>
+            <div className='py-20 bg-background-10 shadow-inner-lg '>
+              <h1 className='text-5xl font-bold t mx-auto px-4 xl:px-20 2xl:px-32 container'>Communities of Practice</h1>
+            </div>
+            <div className='pt-4 container mx-auto px-4 xl:px-20 2xl:px-32'>
               <div className='w-full flex justify-center'>
-                <Search />
+                <Search setSearch={setSearch} />
               </div>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
-                {data.map((user: any, idx: number) => (
-                  <div key={idx} className='flex flex-col md:items-start items-center py-4 hover:scale-[103%] hover:text-secondary-2 duration-300 flex flex-col'>
-                    <div className='rounded-full overflow-hidden h-[100px] w-[100px] mb-3'>
-                      <Image alt='anjay' src={`${user.url}`} height={1000} width={1000} className="w-full h-full duration-300" />
+                {data.filter((user: any) => user.title.toLowerCase().includes(search)
+                ).map((user: any, idx: number) => (
+                  <div key={idx} className='border p-4 rounded-md shadow-lg text-center py-4 hover:scale-[103%] hover:text-secondary-2 duration-300 flex flex-col'>
+                    <div className='flex flex-col items-center'>
+                      <div className='flex items-center justify-center rounded-full overflow-hidden h-[100px] w-[100px] mb-3'>
+                        <Image alt='anjay' src={`${user.url}`} height={1000} width={1000} className="w-full h-full duration-300" />
+                      </div>
                     </div>
-                    <h1 className='text-lg font-bold pb-2 text-center md:text-start'>{user.title}</h1>
-                    <h1 className='text-gray-500 pb-2 text-center md:text-start'>{user.desc}</h1>
-                    <h1 className='text-gray-500 text-center md:text-start'>Author:</h1>
-                    <h1 className='text-gray-500 pb-2 text-center md:text-start'>{user.author}</h1>
-                    <h1 className='text-gray-500 text-center md:text-start'>Member:</h1>
+                    <h1 className='text-lg font-bold pb-2 text-center md:t'>{user.title}</h1>
+                    <h1 className='text-gray-500 pb-2 text-center md:t'>{user.desc}</h1>
+                    <h1 className='text-gray-500 text-center md:t'>Author:</h1>
+                    <h1 className='text-gray-500 pb-2 text-center md:t'>{user.author}</h1>
+                    <h1 className='text-gray-500 text-center md:t'>Member:</h1>
                     {user.member.map((member: any, idx: number) => (
-                      <h1 key={idx} className='text-gray-500 text-center md:text-start'>{member.id}. {member.name}</h1>
+                      <h1 key={idx} className='text-gray-500 text-center md:t'>{member.name}</h1>
                     ))}
                   </div>
                 ))}

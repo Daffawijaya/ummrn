@@ -5,16 +5,27 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 export default function Login() {
-    const [isAuth, setIsAuth] = useState(false);
+    const [username, setUsername] = useState({});
+    const [password, setPassword] = useState({});
+
+    const handleUsernameChange = (e: any) => {
+        setUsername(e.target.value);
+    };
+
+    const handlePasswordChange = (e: any) => {
+        setPassword(e.target.value);
+    };
+
     return (
         <>
             <Head>
                 <title>UMMRN | Login</title>
                 <link rel="icon" href="/polri.png" />
             </Head>
-            <div className="z-0 fixed h-screen w-screen bg-[url('/background.jpg')] bg-cover">
-                <div className='bg-black h-full w-full opacity-60' />
-            </div>
+
+            <div className="z-0 fixed h-screen w-screen bg-[url('/bg3.jpg')] bg-cover ">
+        <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-black duration-300 backdrop-blur-sm' />
+      </div>
 
             <div className="z-50 relative h-screen w-screen">
                 <div className='flex flex-col justify-between h-full'>
@@ -37,22 +48,22 @@ export default function Login() {
                         <div className='shadow-md bg-white md:w-[380px] w-[300px] h-auto rounded rounded-xl p-5 justify-center flex flex-col items-center hover:scale-[101%] duration-300'>
                             <h1 className='text-2xl font-bold'>Selamat Datang!</h1>
                             <p className='text-sm text-gray-500 pb-3'>Silahkan Masukkan Detail Anda</p>
-                            <div className='flex flex-col space-y-3 w-full'>
+                            <form className='flex flex-col space-y-3 w-full'>
                                 <div className='flex flex-col w-full space-y-2'>
                                     <label className='font-medium'>
                                         Username
                                     </label>
-                                    <input type="text" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="1" name="username" placeholder='Masukkan Username Anda'>
+                                    <input onChange={handleUsernameChange} type="text" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="1" name="username" placeholder='Masukkan Username Anda'>
                                     </input>
                                 </div>
                                 <div className='flex flex-col w-full space-y-2'>
                                     <label className='font-medium'>
                                         Kata Sandi
                                     </label>
-                                    <input type="password" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="2" name="password" placeholder='Masukkan Kata Sandi Anda'>
+                                    <input onChange={handlePasswordChange} type="password" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="2" name="password" placeholder='Masukkan Kata Sandi Anda'>
                                     </input>
                                 </div>
-                            </div>
+                            </form>
                             <div className="flex justify-between items-center w-full py-3">
                                 <div className="flex items-center space-x-1 sm:space-x-1.5">
                                     <input
@@ -76,14 +87,22 @@ export default function Login() {
                                 </a>
                             </div>
                             <div className='w-full'>
-                                <Link href={"/home"}>
+                                {username === "cindypatikasari@gmail.com" && password === "123456" ?
+                                    <Link href={"/home"}>
+                                        <button
+                                            type="submit"
+                                            className="hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                        >
+                                            Masuk
+                                        </button>
+                                    </Link> :
                                     <button
                                         type="submit"
                                         className="hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
                                     >
                                         Masuk
-                                    </button>
-                                </Link>
+                                    </button>}
+
                             </div>
 
                             <div className='pt-3 text-sm font-medium'>Belum Punya Akun?
@@ -107,13 +126,10 @@ export default function Login() {
                                     </button>
                                 </Link>
                             </div>
-
-
-
                         </div>
                     </div>
 
-                    <div className='h-20'></div>
+                    <div></div>
 
                     <div></div>
                     <Link href={"/"}>

@@ -14,9 +14,9 @@ export default function Register() {
                 <title>UMMRN | Register</title>
                 <link rel="icon" href="/polri.png" />
             </Head>
-            <div className="z-0 fixed h-screen w-screen bg-[url('/background.jpg')] bg-cover">
-                <div className='bg-black h-full w-full opacity-60' />
-            </div>
+            <div className="z-0 fixed h-screen w-screen bg-[url('/bg3.jpg')] bg-cover ">
+        <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-black duration-300 backdrop-blur-sm' />
+      </div>
 
             <div className="z-50 relative h-screen w-screen">
                 <div className='flex flex-col h-full'>

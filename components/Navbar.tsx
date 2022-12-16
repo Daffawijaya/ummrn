@@ -2,59 +2,49 @@ import React from 'react'
 import Image from 'next/image'
 import { useRouter } from "next/router";
 import Link from 'next/link'
-import ProfileMenu from './ProfileMenu';
-import Notification from './Notification';
-import MobileMenu from './MobileMenu';
+import { FaUserAlt } from "react-icons/fa";
 
 const menu = [
     {
-        title: "Home",
-        url: "/home"
-    },
-    {
-        title: "Researchers",
-        url: "/researches"
-    },
-    {
-        title: "Communities of Practice",
-        url: "/communities-of-practice"
-    },
-    {
-        title: "Projects",
-        url: "/projects"
-    },
-    {
-        title: "call for projects",
-        url: "/call-for-projects"
+        title: "Beranda",
+        url: "/"
     },
 ]
 
 const Navbar = () => {
     const router = useRouter();
+
     return (
         <>
-            <nav className="bg-primary px-4 sm:px-4 py-4 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 overflow-hidden">
-                <div className="container flex flex-wrap items-center justify-between mx-auto">
-                    <a href="https://www.umm.ac.id/" className="flex items-center h-10 mr-24">
-                        <Image alt='anjay' src={'/logo-umm_1.png'} height={800} width={800} className="hover:translate-x-1 duration-300 w-full h-full" />
-                    </a>
-                    <div className="flex md:order-2 items-center space-x-4">
-                        <Notification />
-                        <ProfileMenu />
+            <nav className="bg-black px-4 xl:px-20 2xl:px-32 py-5 dark:bg-gray-900 fixed w-full z-50 top-0 left-0">
+                <div className="flex items-center justify-between container mx-auto">
+                    <button className="flex items-center h-10">
+                        <Image alt='anjay' src={'/logo-umm_1.png'} height={800} width={800} className="mr-24 hover:translate-x-1 duration-300 w-full h-full" />
+                    </button>
 
-                        <div className='md:hidden'>
-                            <MobileMenu />
+                    <div className="items-center flex w-auto ">
+                        <div className="flex order-2 items-center space-x-4 ml-12">
+                            <Link href={"/login"}>
+                            <div className="bg-white py-2 pl-2 pr-2.5 rounded-full hover:-translate-x-1 duration-300 hover:text-secondary-2">
+                                <button
+                                    className="font-base text-sm flex items-center space-x-3 "
+                                >
+                                    <p className='text-gray-400 ml-1'><FaUserAlt /></p>
+                                    <div className="ml-2 ">
+                                        <p className='mr-1 font-medium'>Masuk ke Akun</p>
+                                    </div>
+                                </button>
+                            </div>
+                            </Link>
+                            
                         </div>
-
-                    </div>
-                    <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                        <ul className="flex space-x-7">
+                        <ul className="lg:grid lg:grid-cols-1 lg:gap-8 lg:block hidden">
                             {menu.map((user: any, idx: number) => (
                                 <li key={idx}>
-                                    <Link href={user.url} className={`text-sm capitalize hover:text-secondary-2 duration-300 hover:scale-105 block
-                                        ${router.pathname.includes(user.url)
-                                            ? "text-secondary-2 scale-105"
-                                            : "text-white"}
+                                    <Link href={user.url} className={` font-medium text-[17px] capitalize duration-300 hover:-translate-x-1 block  rounded lg:bg-transparent
+                                        ${router.pathname === user.url
+                                            ? "text-white hover:secondary-1"
+                                            : "text-white hover:secondary-1"}
                                     `}>
                                         {user.title}
                                     </Link>

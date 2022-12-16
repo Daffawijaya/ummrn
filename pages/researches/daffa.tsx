@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Navbar from '../../components/Navbar'
+import NavbarHome from '../../components/NavbarHome'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 
@@ -10,14 +10,16 @@ export default function Profil() {
                 <title>UMMRN | Daffa</title>
             </Head>
 
-            <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
-                <Navbar />
+            <div className="min-h-screen min-w-screen flex flex-col">
+                <NavbarHome />
 
                 {/* content */}
-                <div className='flex flex-col items-center pt-24'>
-                    <div className='px-[15%] pt-8 divide-y w-full'>
-                        <h1 className='text-3xl font-bold pb-5 text-gray-800 flex justify-center'>Profile</h1>
-                        <div className='pt-7'>
+                <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>
+                    <div className='w-full'>
+                        <div className='py-20 bg-background-10 shadow-inner-lg '>
+                            <h1 className='text-5xl font-bold text-start mx-auto px-4 xl:px-20 2xl:px-32 container'>Profile</h1>
+                        </div>
+                        <div className='pt-7 container mx-auto px-4 xl:px-20 2xl:px-32'>
                             <div className='flex md:flex-row flex-col md:space-x-10 space-y-2 md:text-start text-center'>
                                 <div className='w-full md: w-auto justify-center flex'>
                                     <div className='rounded-full overflow-hidden h-[200px] w-[200px] min-h-[200px] min-w-[200px] mb-3'>

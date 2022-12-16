@@ -14,7 +14,7 @@ module.exports = {
       "secondary-2": "#14BF98",
       "secondary-3": "#2A8C73",
       //Background Colors
-      "background-10": "#FFFFFF",
+      "background-10": "#EDEDED",
       //Status Colors
       success: "#3BBF31",
       warning: "#E8B100",
