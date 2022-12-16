@@ -8,9 +8,11 @@ export default function Profil() {
         <>
             <Head>
                 <title>UMMRN | Daffa</title>
+                <link rel="icon" href="/fav.png" />
             </Head>
 
             <div className="min-h-screen min-w-screen flex flex-col">
+                
                 <NavbarHome />
 
                 {/* content */}

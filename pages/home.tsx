@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Head>
         <title>UMMRN | Home</title>
-        <link rel="icon" href="/polri.png" />
+        <link rel="icon" href="/fav.png" />
       </Head>
       <div className="z-0 fixed h-screen w-screen bg-[url('/latar.jpg')] bg-cover ">
         <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-60 bg-black duration-300 backdrop-blur-sm' />

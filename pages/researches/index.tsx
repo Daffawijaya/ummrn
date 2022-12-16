@@ -16,6 +16,7 @@ export default function Researches() {
         <>
             <Head>
                 <title>UMMRN | Researches</title>
+                <link rel="icon" href="/fav.png" />
             </Head>
 
             <div className="min-h-screen min-w-screen flex flex-col">

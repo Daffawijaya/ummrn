@@ -20,7 +20,7 @@ export default function Login() {
         <>
             <Head>
                 <title>UMMRN | Login</title>
-                <link rel="icon" href="/polri.png" />
+                <link rel="icon" href="/fav.png" />
             </Head>
 
             <div className="z-0 fixed h-screen w-screen bg-[url('/bg3.jpg')] bg-cover ">

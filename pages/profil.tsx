@@ -10,7 +10,7 @@ export default function Profil() {
         <>
             <Head>
                 <title>UMMRN | Profil</title>
-                <link rel="icon" href="/polri.png" />
+                <link rel="icon" href="/fav.png" />
             </Head>
 
              <div className="min-h-screen min-w-screen flex flex-col">

@@ -64,37 +64,37 @@ export const dataResearches = [
     },
     {
         name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
+        url: "/daffa3.jpeg",
         depart: "Informatics Engineering",
         nim: "201910370311125"
     },
     {
         name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
+        url: "/cindy2.png",
         depart: "Informatics Engineering",
         nim: "201910370311106"
     },
     {
         name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
+        url: "/cindy3.jpeg",
         depart: "Informatics Engineering",
         nim: "201910370311106"
     },
     {
         name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
+        url: "/daffa4.jpeg",
         depart: "Informatics Engineering",
         nim: "201910370311125"
     },
     {
         name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
+        url: "/cindy4.jpeg",
         depart: "Informatics Engineering",
         nim: "201910370311106"
     },
     {
         name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
+        url: "/daffa2.jpeg",
         depart: "Informatics Engineering",
         nim: "201910370311125"
     },

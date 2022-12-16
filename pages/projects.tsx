@@ -14,7 +14,7 @@ export default function Projects() {
     <>
       <Head>
         <title>UMMRN | Projects</title>
-        <link rel="icon" href="/polri.png" />
+        <link rel="icon" href="/fav.png" />
       </Head>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
