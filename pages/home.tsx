@@ -20,16 +20,16 @@ export default function Home() {
         <div className='2xl:px-32 container mx-auto px-4'>
           <span>
             <span className='flex flex-col text-start space-y-4 font-bold text-white hover:translate-x-1 duration-300'>
-              <h1 className='text-4xl md:text-5xl text-start'>YOUR RESEACRH</h1>
-              <div className='text-5xl md:text-6xl text-start hover:text-secondary-2 duration-300'>OPPORTUNITIES</div>
+              <h1 className='text-3xl sm:text-5xl text-start'>YOUR RESEACRH</h1>
+              <div className='text-4xl sm:text-6xl text-start hover:text-secondary-2 duration-300'>OPPORTUNITIES</div>
             </span>
           </span>
 
           <div className="text-white text-start flex flex-col pt-5">
-            <h3 className="text-sm font-medium">
+            <h3 className="text-xs sm:text-sm font-medium">
               UNIVERSITAS MUHAMMADIYAH MALANG
             </h3>
-            <h1 className="pb-5 text-3xl font-medium">
+            <h1 className="pb-5 text-xl sm:text-3xl font-medium">
               UMM Research Network
             </h1>
           </div>

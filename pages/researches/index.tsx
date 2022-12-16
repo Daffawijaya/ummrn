@@ -6,57 +6,7 @@ import Link from 'next/link'
 import Search from '../../components/Search'
 import { useState } from 'react';
 import NavbarHome from '../../components/NavbarHome'
-
-const data = [
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
-]
+import { dataResearches } from '../../data/data'
 
 export default function Researches() {
 
@@ -75,7 +25,7 @@ export default function Researches() {
                 <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>
                     <div className='w-full'>
                         <div className='py-20 bg-background-10 shadow-inner-lg '>
-                            <h1 className='text-5xl font-bold text-start mx-auto px-4 xl:px-20 2xl:px-32 container'>Call for Projects</h1>
+                            <h1 className='text-5xl font-bold text-start mx-auto px-4 xl:px-20 2xl:px-32 container'>Researches</h1>
                         </div>
                         <div className='pt-4 container mx-auto px-4 xl:px-20 2xl:px-32'>
                             <div className='w-full flex justify-center'>
@@ -83,7 +33,7 @@ export default function Researches() {
                             </div>
 
                             <div className='grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4'>
-                                {data.filter((user: any) => user.name.toLowerCase().includes(search)
+                                {dataResearches.filter((user: any) => user.name.toLowerCase().includes(search)
                                 ).map((user: any, idx: number) => (
                                     <>
                                         {user.name === "Cindy Patika Sari" ?

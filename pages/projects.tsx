@@ -1,55 +1,10 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Search from '../components/Search'
 import { useState } from 'react';
 import NavbarHome from '../components/NavbarHome'
-
-const data = [
-  {
-    title: "Diwan Beli Ikan Cupang Terus Viral",
-    name: "Daffa Wijaya",
-    year: "2022",
-    status: "Open",
-    url: "/projects.png"
-  },
-  {
-    title: "Kamu Nanyae Ini Potongan Model Apa?",
-    name: "Cindy Patika Sari",
-    year: "2024",
-    status: "Active",
-    url: "/projects.png"
-  },
-  {
-    title: "Tutorial Membuat Website Tanpa Bug",
-    name: "Cindy Patika Sari",
-    year: "2024",
-    status: "Completed",
-    url: "/projects.png"
-  },
-  {
-    title: "Kamu Nanyae Ini Potongan Model Apa?",
-    name: "Cindy Patika Sari",
-    year: "2024",
-    status: "Active",
-    url: "/projects.png"
-  },
-  {
-    title: "Kamu Nanyae Ini Potongan Model Apa?",
-    name: "Cindy Patika Sari",
-    year: "2024",
-    status: "Completed",
-    url: "/projects.png"
-  },
-  {
-    title: "Diwan Beli Ikan Cupang Terus Viral",
-    name: "Daffa Wijaya",
-    year: "2022",
-    status: "Open",
-    url: "/projects.png"
-  },
-]
+import { dataProjects } from '../data/data';
 
 export default function Projects() {
 
@@ -76,7 +31,7 @@ export default function Projects() {
                 <Search setSearch={setSearch} />
               </div>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
-                {data.filter((user: any) => user.title.toLowerCase().includes(search)
+                {dataProjects.filter((user: any) => user.title.toLowerCase().includes(search)
                 ).map((user: any, idx: number) => (
                   <div key={idx} className='border shadow-lg rounded-md p-4 text-center md:rt flex flex-col py-4 hover:scale-[103%] hover:text-secondary-2 duration-300 flex flex-col justify-between'>
                     <div className='flex flex-col items-center'>

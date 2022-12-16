@@ -4,93 +4,7 @@ import Footer from '../components/Footer'
 import Search from '../components/Search'
 import { useState } from 'react';
 import NavbarHome from '../components/NavbarHome'
-
-const data = [
-  {
-    title: "Knowledge Management",
-    url: "/cop.png",
-    desc: "Forum Group Discussion about Knowledge Management and its application.",
-    author: "Daffa Wijaya",
-    member: [
-      {
-        name: "Cindy Patika Sari"
-      },
-      {
-        name: "Dafa Yan Wijaya"
-      }
-    ]
-  },
-  {
-    title: "Software Engineering",
-    url: "/cop.png",
-    desc: "Forum Group Discussion about Knowledge Management and its application.",
-    author: "Cindy Patika Sari",
-    member: [
-      {
-        name: "Cindy Patika Sari"
-      },
-      {
-        name: "Dafa Yan Wijaya"
-      }
-    ]
-  },
-  {
-    title: "Knowledge Management",
-    url: "/cop.png",
-    desc: "Forum Group Discussion about Knowledge Management and its application.",
-    author: "Daffa Wijaya",
-    member: [
-      {
-        name: "Cindy Patika Sari"
-      },
-      {
-        name: "Dafa Yan Wijaya"
-      }
-    ]
-  },
-  {
-    title: "Knowledge Management",
-    url: "/cop.png",
-    desc: "Forum Group Discussion about Knowledge Management and its application.",
-    author: "Daffa Wijaya",
-    member: [
-      {
-        name: "Cindy Patika Sari"
-      },
-      {
-        name: "Dafa Yan Wijaya"
-      }
-    ]
-  },
-  {
-    title: "Software Engineering",
-    url: "/cop.png",
-    desc: "Forum Group Discussion about Knowledge Management and its application.",
-    author: "Cindy Patika Sari",
-    member: [
-      {
-        name: "Cindy Patika Sari"
-      },
-      {
-        name: "Dafa Yan Wijaya"
-      }
-    ]
-  },
-  {
-    title: "Knowledge Management",
-    url: "/cop.png",
-    desc: "Forum Group Discussion about Knowledge Management and its application.",
-    author: "Daffa Wijaya",
-    member: [
-      {
-        name: "Cindy Patika Sari"
-      },
-      {
-        name: "Dafa Yan Wijaya"
-      }
-    ]
-  },
-]
+import { dataCop } from '../data/data';
 
 export default function CommunitiesofPractice() {
 
@@ -117,7 +31,7 @@ export default function CommunitiesofPractice() {
                 <Search setSearch={setSearch} />
               </div>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
-                {data.filter((user: any) => user.title.toLowerCase().includes(search)
+                {dataCop.filter((user: any) => user.title.toLowerCase().includes(search)
                 ).map((user: any, idx: number) => (
                   <div key={idx} className='border p-4 rounded-md shadow-lg text-center py-4 hover:scale-[103%] hover:text-secondary-2 duration-300 flex flex-col'>
                     <div className='flex flex-col items-center'>
