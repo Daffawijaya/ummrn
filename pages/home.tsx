@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='relative z-50 w-full'>
+        <div className='relative z-20 w-full'>
           <FooterHome />
         </div>
       </div>

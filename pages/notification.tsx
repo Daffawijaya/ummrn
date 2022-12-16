@@ -9,7 +9,7 @@ export default function Notification() {
     return (
         <>
             <Head>
-                <title>UMMRN | Call for Projects</title>
+                <title>UMMRN | Notification</title>
                 <link rel="icon" href="/fav.png" />
             </Head>
 
