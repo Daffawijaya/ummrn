@@ -33,7 +33,7 @@ export default function Login() {
                     </div>
 
                     <div className='flex justify-center'>
-                        <div className='shadow-md bg-white md:w-[380px] w-[300px] h-auto rounded rounded-[3%] p-5 justify-center flex flex-col items-center hover:scale-[101%] duration-300'>
+                        <div className='shadow-md bg-white md:w-[380px] w-[300px] h-auto rounded rounded-xl p-5 justify-center flex flex-col items-center hover:scale-[101%] duration-300'>
                             <h1 className='text-2xl font-bold'>Selamat Datang!</h1>
                             <p className='text-sm text-gray-500 pb-3'>Silahkan Masukkan Detail Anda</p>
                             <div className='flex flex-col space-y-3 w-full'>
@@ -74,12 +74,17 @@ export default function Login() {
                                     Lupa Kata Sandi?
                                 </a>
                             </div>
-                            <button
-                                type="submit"
-                                className=" hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
-                            >
-                                Masuk
-                            </button>
+                            <div className='w-full'>
+                                <Link href={"/home"}>
+                                    <button
+                                        type="submit"
+                                        className="hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                    >
+                                        Masuk
+                                    </button>
+                                </Link>
+                            </div>
+
                             <div className='pt-3 text-sm font-medium'>Belum Punya Akun?
                                 <Link href={"/register"}>
                                     <button className='duration-300 hover:scale-105 text-secondary-2 hover:text-secondary-3 hover:underline ml-1'> Daftar Disini</button>
@@ -88,15 +93,21 @@ export default function Login() {
                             <p className="flex items-center h-[33px] w-full my-2">
                                 <Image alt='anjay' src={'/divider.png'} height={1000} width={1000} className="w-full h-full" />
                             </p>
-                            <button
-                                type="submit"
-                                className="flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
-                            >
-                                <p className="flex items-center h-5">
-                                    <Image alt='anjay' src={'/google.png'} height={1000} width={1000} className="w-full h-full" />
-                                </p>
-                                <p>Masuk dengan Webmail UMM</p>
-                            </button>
+                            <div className='w-full'>
+                                <Link href={"/home"}>
+                                    <button
+                                        type="submit"
+                                        className="flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                    >
+                                        <p className="flex items-center h-5">
+                                            <Image alt='anjay' src={'/google.png'} height={1000} width={1000} className="w-full h-full" />
+                                        </p>
+                                        <p>Masuk dengan Webmail UMM</p>
+                                    </button>
+                                </Link>
+                            </div>
+
+
 
                         </div>
                     </div>

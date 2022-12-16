@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
+import Search from '../components/Search'
 
 const data = [
   {
@@ -69,6 +70,9 @@ export default function CallForProjects() {
           <div className='px-[15%] pt-8 divide-y w-full'>
             <h1 className='text-3xl font-bold pb-5 text-gray-800 text-center'>Call for Projects</h1>
             <div className='pt-4'>
+              <div className='w-full flex justify-center'>
+                <Search />
+              </div>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
                 {data.map((user: any, idx: number) => (
                   <div key={idx} className='text-center md:text-start py-4 hover:scale-[103%] hover:text-secondary-2 duration-300 flex flex-col'>

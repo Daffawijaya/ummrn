@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 const menu = [
     {
         title: "Home",
-        url: "/"
+        url: "/home"
     },
     {
         title: "Researchers",

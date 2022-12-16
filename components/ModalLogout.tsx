@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { useState } from "react";
 import { AiOutlineInfoCircle } from "react-icons/ai";
@@ -21,7 +22,10 @@ const ModalLogout = () => {
                         <p className='font-medium text-xl text-black text-center'>Apakah Anda Yakin Ingin Keluar?</p>
                         <div className='flex space-x-2'>
                             <button onClick={() => setShowModal(false)} className='font-medium hover:scale-[103%] duration-300 w-24 py-1 rounded-md hover:bg-gray-200 bg-white border border-2 border-gray-500 hover:border-red-500 hover:text-red-500'>Tidak</button>
-                            <button onClick={() => setShowModal(false)} className='hover:scale-[103%] duration-300 w-24 py-1 rounded-md bg-red-500 hover:bg-red-700 text-white'>Iya</button>
+                            <Link href={"/"}>
+                                <button onClick={() => setShowModal(false)} className='hover:scale-[103%] duration-300 w-24 py-1 rounded-md bg-red-500 hover:bg-red-700 text-white border border-2 border-red-500 hover:border-red-700'>Iya</button>
+                            </Link>
+
                         </div>
                     </div>
                 </div>

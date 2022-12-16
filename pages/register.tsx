@@ -33,7 +33,7 @@ export default function Register() {
                     </div>
 
                     <div className='flex justify-center pb-10'>
-                        <div className='shadow-md bg-white md:w-[380px] w-[300px] h-auto rounded rounded-[3%] p-5 justify-center flex flex-col items-center hover:scale-[101%] duration-300'>
+                        <div className='shadow-md bg-white md:w-[380px] w-[300px] h-auto rounded rounded-xl p-5 justify-center flex flex-col items-center hover:scale-[101%] duration-300'>
                             <h1 className='text-2xl font-bold'>Selamat Datang!</h1>
                             <p className='text-sm text-gray-500 pb-3'>Silahkan Masukkan Detail Anda</p>
 
@@ -65,6 +65,14 @@ export default function Register() {
 
                                 <div className='flex flex-col w-full space-y-2'>
                                     <label className='font-medium'>
+                                        Nomor Hp
+                                    </label>
+                                    <input type="text" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="3" name="hp" placeholder='Masukkan Nomor Hp Anda'>
+                                    </input>
+                                </div>
+
+                                <div className='flex flex-col w-full space-y-2'>
+                                    <label className='font-medium'>
                                         Username
                                     </label>
                                     <input type="text" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="4" name="nim" placeholder='Masukkan Username Baru Anda'>
@@ -79,31 +87,16 @@ export default function Register() {
                                     </input>
                                 </div>
 
-                            </div>
-
-                            <div className="flex justify-between items-center w-full py-3">
-                                <div className="flex items-center space-x-1 sm:space-x-1.5">
-                                    <input
-                                        id="remember"
-                                        type="checkbox"
-                                        value=""
-                                        className="text-secondary-2 hover:scale-110 duration-300 w-3 h-3 sm:w-4 sm:h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-secondary-2 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                                    />
-                                    <label
-                                        htmlFor="remember"
-                                        className="text-[10px] sm:text-xs md:text-sm font-medium"
-                                    >
-                                        Ingatkan saya
+                                <div className='flex flex-col w-full space-y-2'>
+                                    <label className='font-medium'>
+                                        Konfirmasi Kata Sandi
                                     </label>
+                                    <input type="password" className='rounded rounded-md border-1 border-gray-300 focus:ring-secondary-2 duration-300 focus:border-none' id="4" name="passwordconfirmation" placeholder='Masukkan Konfirmasi Kata Sandi Baru Anda'>
+                                    </input>
                                 </div>
-                                <a
-                                    href="#"
-                                    className="font-medium hover:text-secondary-3 duration-300 hover:scale-[102%] text-[10px] sm:text-xs md:text-sm text-secondary-2"
-                                >
-                                    Lupa Kata Sandi?
-                                </a>
-                            </div>
 
+                            </div>
+                            <div className='h-7'></div>
                             <button
                                 onClick={() => router.back()}
                                 type="submit"
@@ -114,15 +107,19 @@ export default function Register() {
                             <p className="flex items-center h-[33px] w-full my-2">
                                 <Image alt='anjay' src={'/divider.png'} height={1000} width={1000} className="w-full h-full" />
                             </p>
-                            <button
-                                type="submit"
-                                className="flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
-                            >
-                                <p className="flex items-center h-5">
-                                    <Image alt='anjay' src={'/google.png'} height={1000} width={1000} className="w-full h-full" />
-                                </p>
-                                <p>Daftar dengan Webmail UMM</p>
-                            </button>
+                            <div className='w-full'>
+                                <Link href={"/login"}>
+                                    <button
+                                        type="submit"
+                                        className="flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                    >
+                                        <p className="flex items-center h-5">
+                                            <Image alt='anjay' src={'/google.png'} height={1000} width={1000} className="w-full h-full" />
+                                        </p>
+                                        <p>Daftar dengan Webmail UMM</p>
+                                    </button>
+                                </Link>
+                            </div>
 
                         </div>
                     </div>
