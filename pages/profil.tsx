@@ -7,7 +7,7 @@ export default function Profil() {
     return (
         <>
             <Head>
-                <title>UMMRN | Detail</title>
+                <title>UMMRN | Profil</title>
             </Head>
 
             <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
