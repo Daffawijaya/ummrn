@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/fav.png" />
       </Head>
 
-      <div className="z-0 fixed h-screen w-screen bg-[url('/bg4.jpg')] bg-cover ">
+      <div className="z-0 fixed h-screen w-screen bg-[url('/5f2b44a2e433099524a989b3e3691e1c.png')] bg-cover ">
         <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-60 bg-black duration-300 backdrop-blur-sm' />
       </div>
 

@@ -9,14 +9,14 @@ export default function Home() {
         <title>UMMRN | Home</title>
         <link rel="icon" href="/fav.png" />
       </Head>
-      <div className="z-0 fixed h-screen w-screen bg-[url('/latar.jpg')] bg-cover ">
+      <div className="z-0 fixed h-screen w-screen bg-[url('/5f2b44a2e433099524a989b3e3691e1c.png')] bg-cover ">
         <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-60 bg-black duration-300 backdrop-blur-sm' />
       </div>
 
       <div className="z-50 relative h-screen w-screen flex flex-col justify-between ">
         <NavbarHome />
         <div className='h-36'></div>
-        
+
         <div className='2xl:px-32 container mx-auto px-4'>
           <span>
             <span className='flex flex-col text-start space-y-4 font-bold text-white hover:translate-x-1 duration-300'>
