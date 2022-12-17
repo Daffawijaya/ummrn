@@ -3,10 +3,21 @@ import { AiFillHome } from "react-icons/ai";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { Toaster, toast } from 'react-hot-toast';
 
 export default function Login() {
     const [username, setUsername] = useState({});
     const [password, setPassword] = useState({});
+    const [isAuth, setIsAuth] = useState(false)
+
+    const handleClickWrongPassword = () => {
+        toast.error("Username atau Password Salah");
+    }
+
+    const handleClickCorrectPassword = () => {
+        toast.success("Berhasil Login");
+        setIsAuth(true);
+    }
 
     const handleUsernameChange = (e: any) => {
         setUsername(e.target.value);
@@ -45,6 +56,10 @@ export default function Login() {
                     </div>
 
                     <div className='flex justify-center'>
+                        <div className='absolute left-0'>
+                            <Toaster />
+                        </div>
+
                         <div className='shadow-md bg-white md:w-[380px] w-[300px] h-auto rounded rounded-xl p-5 justify-center flex flex-col items-center hover:scale-[101%] duration-300'>
                             <h1 className='text-2xl font-bold'>Selamat Datang!</h1>
                             <p className='text-sm text-gray-500 pb-3'>Silahkan Masukkan Detail Anda</p>
@@ -87,9 +102,10 @@ export default function Login() {
                                 </a>
                             </div>
                             <div className='w-full'>
-                                {username === "cindypatikasari@gmail.com" && password === "123456" ?
+                                {username === "cindypatikasari" && password === "123456" ?
                                     <Link href={"/home"}>
                                         <button
+                                            onClick={handleClickCorrectPassword}
                                             type="submit"
                                             className="hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
                                         >
@@ -97,12 +113,12 @@ export default function Login() {
                                         </button>
                                     </Link> :
                                     <button
+                                        onClick={handleClickWrongPassword}
                                         type="submit"
                                         className="hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
                                     >
                                         Masuk
                                     </button>}
-
                             </div>
 
                             <div className='pt-3 text-sm font-medium'>Belum Punya Akun?

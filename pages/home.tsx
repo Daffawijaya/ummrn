@@ -2,7 +2,11 @@ import Head from 'next/head'
 import NavbarHome from '../components/NavbarHome';
 import FooterHome from '../components/FooterHome';
 
-export default function Home() {
+interface dataProps{
+  auth: boolean;
+}
+
+export default function Home(auth:dataProps) {
   return (
     <>
       <Head>
