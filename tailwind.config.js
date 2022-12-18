@@ -12,9 +12,9 @@ module.exports = {
       "primary-1": "#E148F2",
       "primary-2": "#AA28B8",
       "primary-3": "#861E91",
-      "secondary-1": "#FF7FD0",
-      "secondary-2": "#F7079E",
-      "secondary-3": "#D10F8A",
+      "secondary-1": "#2F0FD1",
+      "secondary-2": "#1E078D",
+      "secondary-3": "#160470",
       //Background Colors
       "background-10": "#EDEDED",
       //Status Colors

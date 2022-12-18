@@ -17,7 +17,12 @@ export default function Researches() {
                 <link rel="icon" href="/fav.png" />
             </Head>
 
-            <div className="min-h-screen min-w-screen flex flex-col bg-[#F8F8F8]">
+            <div className="z-0 absolute h-screen w-screen bg-[url('/anj.jpg')] bg-cover ">
+        <div className='absolute inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-white' />
+        <div className='absolute inset-0 z-30 w-screen flex items-center justify-center h-screen bg-gradient-to-t from-white' />
+      </div>
+
+            <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
                 <Navbar setSearch={setSearch} />
 
                 {/* content */}
@@ -32,7 +37,7 @@ export default function Researches() {
                                     <>
                                         {user.name === "Cindy Patika Sari" ?
                                             <Link key={idx} href={'/researches/cindy'}>
-                                                <div className='border rounded-md shadow-md overflow-hidden hover:scale-[103%]  hover:text-red-600 duration-300 flex flex-col justify-center items-center'>
+                                                <div className='bg-white rounded-md shadow-md overflow-hidden hover:scale-[103%]  hover:text-red-600 duration-300 flex flex-col justify-center items-center'>
                                                     <div className='overflow-hidden h-[230px] w-[230px] mb-3'>
                                                         <Image alt='anjay' src={`${user.url}`} height={1000} width={1000} className="w-full h-full duration-300" />
                                                     </div>
@@ -44,7 +49,7 @@ export default function Researches() {
                                             </Link>
                                             :
                                             <Link key={idx} href={'/researches/daffa'}>
-                                                <div className='border rounded-md shadow-md overflow-hidden hover:scale-[103%] hover:text-red-600 duration-300 flex flex-col justify-center items-center'>
+                                                <div className='bg-white rounded-md shadow-md overflow-hidden hover:scale-[103%] hover:text-red-600 duration-300 flex flex-col justify-center items-center'>
                                                     <div className=' overflow-hidden h-[230px] w-[230px] mb-3'>
                                                         <Image alt='anjay' src={`${user.url}`} height={1000} width={1000} className="w-full h-full duration-300" />
                                                     </div>
