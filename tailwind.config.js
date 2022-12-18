@@ -9,10 +9,12 @@ module.exports = {
     extend: {},
     colors: {
       //Primary
-      "primary": "#113448",
-      "secondary-1": "#35F0C4",
-      "secondary-2": "#14BF98",
-      "secondary-3": "#2A8C73",
+      "primary-1": "#E148F2",
+      "primary-2": "#AA28B8",
+      "primary-3": "#861E91",
+      "secondary-1": "#2F0FD1",
+      "secondary-2": "#1E078D",
+      "secondary-3": "#160470",
       //Background Colors
       "background-10": "#EDEDED",
       //Status Colors

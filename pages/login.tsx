@@ -34,9 +34,9 @@ export default function Login() {
                 <link rel="icon" href="/fav.png" />
             </Head>
 
-            <div className="z-0 fixed h-screen w-screen bg-[url('/5f2b44a2e433099524a989b3e3691e1c.png')] bg-cover ">
-                <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-black duration-300 backdrop-blur-sm' />
-            </div>
+            <div className="z-0 fixed h-screen w-screen bg-[url('/anj.jpg')] bg-cover ">
+        <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-50 bg-black' />
+      </div>
 
             <div className="z-50 relative h-screen w-screen">
                 <div className='flex flex-col justify-between h-full'>
@@ -115,7 +115,7 @@ export default function Login() {
                                     <button
                                         onClick={handleClickWrongPassword}
                                         type="submit"
-                                        className="hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                        className="uppercase hover:scale-[101%] duration-300 w-full text-white bg-secondary-2 hover:bg-secondary-3 focus:ring-4 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
                                     >
                                         Masuk
                                     </button>}
@@ -133,7 +133,7 @@ export default function Login() {
                                 <Link href={"/home"}>
                                     <button
                                         type="submit"
-                                        className="flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
+                                        className="uppercase flex flex-row items-center space-x-2 hover:scale-[101%] justify-center duration-300 w-full bg-white hover:bg-secondary-2 hover:border-secondary-2 hover:text-white focus:ring-4 border-gray-300 border-2 focus:outline-none focus:ring-secondary-1 font-medium rounded-md text-[10px] sm:text-xs md:text-sm py-1.5 sm:py-2 text-center"
                                     >
                                         <p className="flex items-center h-5">
                                             <Image alt='anjay' src={'/google.png'} height={1000} width={1000} className="w-full h-full" />

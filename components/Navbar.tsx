@@ -2,58 +2,82 @@ import React from 'react'
 import Image from 'next/image'
 import { useRouter } from "next/router";
 import Link from 'next/link'
-import { FaUserAlt } from "react-icons/fa";
+import ProfileMenu from './ProfileMenu';
+import MobileMenu from './MobileMenu';
+import Search from './Search';
+import Features from './Features';
+import ModalLogout from './ModalLogout';
 
-const menu = [
+interface dataProps {
+    setSearch?: any;
+}
+
+const menuRight = [
     {
-        title: "Beranda",
-        url: "/"
+        title: "NOTIFICATION",
+        url: "/notification"
     },
 ]
 
-const Navbar = () => {
+const menuLeft = [
+    {
+        title: "DASHBOARD",
+        url: "/home"
+    },
+]
+
+const Navbar = ({ setSearch }: dataProps) => {
     const router = useRouter();
 
     return (
         <>
-            <nav className="bg-black px-4 xl:px-20 2xl:px-32 py-5 dark:bg-gray-900 fixed w-full z-50 top-0 left-0">
-                <div className="flex items-center justify-between container mx-auto">
-                    <button className="flex items-center h-10">
-                        <Image alt='anjay' src={'/logo-umm_1.png'} height={800} width={800} className="mr-24 hover:translate-x-1 duration-300 w-full h-full" />
-                    </button>
-
-                    <div className="items-center flex w-auto ">
-                        <div className="flex order-2 items-center space-x-4 ml-12">
-                            <Link href={"/login"}>
-                            <div className="bg-white py-2 pl-2 pr-2.5 rounded-full hover:-translate-x-1 duration-300 hover:text-secondary-2">
-                                <button
-                                    className="font-base text-sm flex items-center space-x-3 "
-                                >
-                                    <p className='text-gray-400 ml-1'><FaUserAlt /></p>
-                                    <div className="ml-2 ">
-                                        <p className='mr-1 font-medium'>Masuk ke Akun</p>
-                                    </div>
-                                </button>
-                            </div>
-                            </Link>
-                            
-                        </div>
-                        <ul className="lg:grid lg:grid-cols-1 lg:gap-8 lg:block hidden">
-                            {menu.map((user: any, idx: number) => (
-                                <li key={idx}>
-                                    <Link href={user.url} className={` font-medium text-[17px] capitalize duration-300 hover:-translate-x-1 block  rounded lg:bg-transparent
-                                        ${router.pathname === user.url
-                                            ? "text-white hover:secondary-1"
-                                            : "text-white hover:secondary-1"}
-                                    `}>
-                                        {user.title}
+            <div className='lg:px-[105px] sticky top-0 w-full z-20 lg:mt-12'>
+                <nav className="shadow-lg bg-white px-6 lg:py-0 dark:bg-gray-900 lg:rounded-md duration-300">
+                    <div className='flex justify-between items-center '>
+                        <div className='space-x-8 lg:flex hidden pt-5 lg:mr-[5%]'>
+                            {menuLeft.map((item: any, id: number) => (
+                                <div key={id}>
+                                    <Link href={item.url}>
+                                        <button className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                                        ${router.pathname === item.url
+                                                ? "text-red-600 border-b-[3px] pb-[9px] border-red-600"
+                                                : "text-black hover:text-red-600 hover:translate-x-1 block pb-[9px]"}
+                                    `}>{item.title}
+                                        </button>
                                     </Link>
-                                </li>
+                                </div>
                             ))}
-                        </ul>
+                            <div><Features /></div>
+                        </div>
+                        <button className="flex items-center h-8">
+                            <Image alt='anjay' src={'/logo-um.png'} height={800} width={800} className="hover:scale-[103%] duration-300 w-full h-full" />
+                        </button>
+                        <div className='lg:hidden pt-5'><MobileMenu /></div>
+                        <div className='flex pt-5 space-x-10 ml-[4%] lg:ml-0'>
+                            <div className='lg:flex hidden'>
+                                {menuRight.map((item: any, id: number) => (
+                                    <div key={id}>
+                                        <Link href={item.url}>
+                                            <button className={`font-medium text-xl capitalize duration-300 hover:-translate-x-1
+                                        ${router.pathname === item.url
+                                                    ? "text-red-600 border-b-[3px] pb-[9px] border-red-600"
+                                                    : "text-black hover:text-red-600 hover:translate-x-1 block pb-[9px]"}
+                                    `}>{item.title}
+                                            </button>
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className='lg:flex hidden'><ProfileMenu /></div>
+
+                            <div className={`${router.pathname === '/home' ? '-order-2 invisible' : ""}`}><Search setSearch={setSearch} /></div>
+                        
+                           
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </>
     )
 }
