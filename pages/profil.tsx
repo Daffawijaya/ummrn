@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import { BsFillPencilFill } from "react-icons/bs";
-import NavbarHome from '../components/NavbarHome';
 
 export default function Profil() {
     return (
@@ -14,7 +13,7 @@ export default function Profil() {
             </Head>
 
              <div className="min-h-screen min-w-screen flex flex-col">
-                <NavbarHome />
+                <Navbar />
 
                 {/* content */}
                 <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>

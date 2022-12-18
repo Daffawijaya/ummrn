@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import NavbarHome from '../../components/NavbarHome'
+import Navbar from '../../components/Navbar'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 
@@ -13,7 +13,7 @@ export default function Profil() {
 
             <div className="min-h-screen min-w-screen flex flex-col">
                 
-                <NavbarHome />
+                <Navbar />
 
                 {/* content */}
                 <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Search from '../components/Search'
 import { useState } from 'react';
-import NavbarHome from '../components/NavbarHome'
+import Navbar from '../components/Navbar';
 import { dataProjects } from '../data/data';
 
 export default function Projects() {
@@ -18,7 +18,7 @@ export default function Projects() {
       </Head>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
-      <NavbarHome />
+      <Navbar />
 
         {/* content */}
         <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>
@@ -28,7 +28,6 @@ export default function Projects() {
             </div>
             <div className='pt-4 container mx-auto px-4 xl:px-20 2xl:px-32'>
               <div className='w-full flex justify-center'>
-                <Search setSearch={setSearch} />
               </div>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10'>
                 {dataProjects.filter((user: any) => user.title.toLowerCase().includes(search)

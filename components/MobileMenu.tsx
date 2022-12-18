@@ -1,83 +1,115 @@
-import React from 'react'
-import { HiMenu } from "react-icons/hi";
+import Link from "next/link";
+import React from "react";
 import { useState } from "react";
-import Link from 'next/link';
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import Image from "next/image";
+import ModalLogout from "./ModalLogout";
 import { useRouter } from "next/router";
-import { MdOutlineClose } from "react-icons/md";
-
-const menu = [
+const menuHead = [
     {
-        title: "Beranda",
+        title: "DASHBOARD",
         url: "/home"
     },
+]
+
+const menuBody = [
     {
-        title: "Notification",
-        url: "/notification"
-    },
-    {
-        title: "Researchers",
+        title: "RESEARCHERS",
         url: "/researches"
     },
     {
-        title: "Communities of Practice",
+        title: "COP",
         url: "/communities-of-practice"
     },
     {
-        title: "Projects",
+        title: "PROJECTS",
         url: "/projects"
     },
     {
-        title: "call for projects",
+        title: "CFP",
         url: "/call-for-projects"
     },
 ]
 
-const MobileMenu = () => {
+
+const menuBottom = [
+    {
+        title: "PROFILE",
+        url: "/profile"
+    },
+    {
+        title: "NOTIFICATION",
+        url: "/notification"
+    },
+    {
+        title: "SIGNOUT",
+        url: "/notification"
+    },
+]
+
+const ProfileMenu = () => {
     const router = useRouter();
     const [showOptions, setShowOptions] = useState(false);
-
+    const [isRotated, setIsRotated] = React.useState(false);
     const handleClick = () => {
         setShowOptions(!showOptions);
+        setIsRotated((prevState) => !prevState);
     };
+
     return (
         <React.Fragment>
-            <div className="flex flex-col items-end z-50">
-                <button onClick={handleClick}>
-                    <HiMenu className="hover:-translate-x-1 duration-300 h-6 w-6 text-gray-400" />
+            <div className="fixed flex w-full flex-col top-[24px] items-center z-50">
+                <button
+                    onClick={handleClick}
+                    className="duration-300 font-medium text-xl flex items-center space-x-2 border-b-[3px] pb-[11px] border-red-500"
+                >
+                    <a className="capitalize">Menu</a>
+                    <a className={`${isRotated ? 'rotate-180' : ''} transition`}><FiChevronDown /></a>
                 </button>
 
                 {showOptions && (
-                    <div onClick={handleClick} className="w-full h-full inset-0 fixed">
-                        <div onClick={(event) => event.stopPropagation()} className="overflow-hidden absolute bg-white w-full flex flex-col pt-3 pb-6">
-                            <div className='container mx-auto px-4 mt-6'>
-                                <div className='text-black pb-4 flex justify-end'>
-                                    <div onClick={handleClick} className='hover:text-red-500 duration-300 hover:scale-110'>
-                                        <MdOutlineClose />
-                                    </div>
+                    <div onClick={handleClick} className="w-full inset-0 top-10 bg-white py-5 border-t rounded-b-md shadow-md">
+                        <div onClick={(event) => event.stopPropagation()} className="w-full space-y-2">
+                            {menuBottom.map((item: any, id: number) => (
+                                <div key={id}>
+                                    <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                                     ${router.pathname === item.url
+                                            ? "text-red-600 "
+                                            : "text-black hover:text-red-600"}
+                                 `}>
+                                        {item.title}
+                                    </Link>
                                 </div>
-                                <h1 className='text-gray-500 font-thin text-xs pb-2'>Menu</h1>
-                                {menu.map((menu: any, idx: number) => (
-                                    <div key={idx} className="">
-                                        <Link href={menu.url}>
-                                            <button className={`text-sm font-medium capitalize hover:text-secondary-2 duration-300 hover:scale-105 block
-                                        ${router.pathname === menu.url
-                                                    ? "text-secondary-2 scale-105"
-                                                    : "text-black"}
-                                    `}>
-                                                <p className="text-start capitalize hover:translate-x-1 duration-300 w-full h-full py-2 hover:text-secondary-2">
-                                                    {menu.title}
-                                                </p>
-                                            </button>
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
+                            ))}
+                            <div className="h-2"></div>
+                            {menuHead.map((item: any, id: number) => (
+                                <div key={id}>
+                                    <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                                     ${router.pathname === item.url
+                                            ? "text-red-600 "
+                                            : "text-black hover:text-red-600"}
+                                 `}>
+                                        {item.title}
+                                    </Link>
+                                </div>
+                            ))}
+                            {menuBody.map((item: any, id: number) => (
+                                <div key={id}>
+                                    <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                                     ${router.pathname === item.url
+                                            ? "text-red-600 "
+                                            : "text-black hover:text-red-600"}
+                                 `}>
+                                        {item.title}
+                                    </Link>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 )}
             </div>
         </React.Fragment>
-    )
-}
+    );
+};
 
-export default MobileMenu
+export default ProfileMenu;

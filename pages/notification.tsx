@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Footer from '../components/Footer'
-import NavbarHome from '../components/NavbarHome'
+import Navbar from '../components/Navbar';
 import { FaStarOfLife } from "react-icons/fa";
 import { dataNotification } from '../data/data';
 
@@ -14,7 +14,7 @@ export default function Notification() {
             </Head>
 
             <div className="min-h-screen min-w-screen flex flex-col bg-[#F8F8F8]">
-                <NavbarHome />
+                <Navbar />
 
                 {/* content */}
                 <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>

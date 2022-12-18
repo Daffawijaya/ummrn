@@ -3,13 +3,12 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Search from '../components/Search'
 import { useState } from 'react';
-import NavbarHome from '../components/NavbarHome'
+import Navbar from '../components/Navbar';
 import { dataCop } from '../data/data';
 
 export default function CommunitiesofPractice() {
 
   const [search, setSearch] = useState("")
-
   return (
     <>
       <Head>
@@ -18,7 +17,7 @@ export default function CommunitiesofPractice() {
       </Head>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
-        <NavbarHome />
+      <Navbar setSearch={setSearch} />
 
         {/* content */}
         <div className='flex flex-col items-center justify-center lg:pt-[140px] pt-[80px]'>
