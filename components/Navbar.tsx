@@ -71,7 +71,7 @@ const Navbar = ({ setSearch }: dataProps) => {
 
                             <div className='lg:flex hidden'><ProfileMenu /></div>
 
-                            <div className={`${router.pathname === '/home' ? '-order-2 invisible' : ""}`}><Search setSearch={setSearch} /></div>
+                            <div className={`${router.pathname === '/home' || router.pathname === '/profil' || router.pathname === '/researches/daffa' || router.pathname === '/researches/cindy' ? '-order-2 invisible' : ""}`}><Search setSearch={setSearch} /></div>
                         
                            
                         </div>

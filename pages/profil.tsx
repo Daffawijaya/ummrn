@@ -13,11 +13,11 @@ export default function Profil() {
             </Head>
 
             <div className="z-0 absolute h-screen w-screen bg-[url('/anj.jpg')] bg-cover ">
-        <div className='absolute inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-white' />
-        <div className='absolute inset-0 z-30 w-screen flex items-center justify-center h-screen bg-gradient-to-t from-white' />
-      </div>
+                <div className='absolute inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-white' />
+                <div className='absolute inset-0 z-30 w-screen flex items-center justify-center h-screen bg-gradient-to-t from-white' />
+            </div>
 
-            <div className="min-h-screen min-w-screen flex flex-col">
+            <div className="relative z-10 min-h-screen min-w-screen flex flex-col">
                 <Navbar />
 
                 {/* content */}
