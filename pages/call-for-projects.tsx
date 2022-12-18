@@ -19,14 +19,10 @@ export default function CallForProjects() {
         <Navbar />
 
         {/* content */}
-        <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>
+        <div className='flex flex-col items-center'>
           <div className='w-full'>
-            <div className='py-20 bg-background-10 shadow-inner-lg '>
-              <h1 className='text-5xl font-bold text-start mx-auto px-4 xl:px-20 2xl:px-32 container'>Call for Projects</h1>
-            </div>
-            <div className='pt-4 container mx-auto px-4 xl:px-20 2xl:px-32'>
-              <div className='w-full flex justify-center'>
-              </div>
+            <h1 className='text-6xl pb-12 pt-10 font-bold text-center mx-auto px-4 xl:px-20 2xl:px-32 container uppercase'>Researches</h1>
+            <div className='container mx-auto px-4 xl:px-20 2xl:px-32'>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6'>
                 {dataCall.filter((user: any) => user.title.toLowerCase().includes(search)
                 ).map((user: any, idx: number) => (
@@ -49,7 +45,7 @@ export default function CallForProjects() {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </>
   )

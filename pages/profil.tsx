@@ -12,16 +12,14 @@ export default function Profil() {
                 <link rel="icon" href="/fav.png" />
             </Head>
 
-             <div className="min-h-screen min-w-screen flex flex-col">
+            <div className="min-h-screen min-w-screen flex flex-col">
                 <Navbar />
 
                 {/* content */}
-                <div className='flex flex-col items-center lg:pt-[140px] pt-[80px]'>
+                <div className='flex flex-col items-center'>
                     <div className='w-full'>
-                        <div className='py-20 bg-background-10 shadow-inner-lg '>
-                            <h1 className='text-5xl font-bold text-start mx-auto px-4 xl:px-20 2xl:px-32 container'>Profile</h1>
-                        </div>
-                        <div className='pt-7 container mx-auto px-4 xl:px-20 2xl:px-32'>
+                        <h1 className='text-6xl pb-12 pt-10 font-bold text-center mx-auto px-4 xl:px-20 2xl:px-32 container uppercase'>Researches</h1>
+                        <div className='container mx-auto px-4 xl:px-20 2xl:px-32'>
                             <div className='flex md:flex-row flex-col md:space-x-10 space-y-2 md:text-start text-center'>
                                 <div className='w-full md: w-auto justify-center flex'>
                                     <div className='rounded-full overflow-hidden h-[200px] w-[200px] min-h-[200px] min-w-[200px] mb-3'>

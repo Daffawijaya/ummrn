@@ -18,7 +18,7 @@ const menuBody = [
         url: "/researches"
     },
     {
-        title: "COP",
+        title: "COMMUNITIES OF PRACTICE",
         url: "/communities-of-practice"
     },
     {
@@ -26,7 +26,7 @@ const menuBody = [
         url: "/projects"
     },
     {
-        title: "CFP",
+        title: "CALL FOR PROJECTS",
         url: "/call-for-projects"
     },
 ]
@@ -35,19 +35,15 @@ const menuBody = [
 const menuBottom = [
     {
         title: "PROFILE",
-        url: "/profile"
+        url: "/profil"
     },
     {
         title: "NOTIFICATION",
         url: "/notification"
     },
-    {
-        title: "SIGNOUT",
-        url: "/notification"
-    },
 ]
 
-const ProfileMenu = () => {
+const MobileMenu = () => {
     const router = useRouter();
     const [showOptions, setShowOptions] = useState(false);
     const [isRotated, setIsRotated] = React.useState(false);
@@ -58,7 +54,7 @@ const ProfileMenu = () => {
 
     return (
         <React.Fragment>
-            <div className="fixed flex w-full flex-col top-[24px] items-center z-50">
+            <div>
                 <button
                     onClick={handleClick}
                     className="duration-300 font-medium text-xl flex items-center space-x-2 border-b-[3px] pb-[11px] border-red-500"
@@ -68,7 +64,7 @@ const ProfileMenu = () => {
                 </button>
 
                 {showOptions && (
-                    <div onClick={handleClick} className="w-full inset-0 top-10 bg-white py-5 border-t rounded-b-md shadow-md">
+                    <div onClick={handleClick} className="absolute inset-x-0 text-center bg-white border-t py-5 rounded-b-lg">
                         <div onClick={(event) => event.stopPropagation()} className="w-full space-y-2">
                             {menuBottom.map((item: any, id: number) => (
                                 <div key={id}>
@@ -81,6 +77,7 @@ const ProfileMenu = () => {
                                     </Link>
                                 </div>
                             ))}
+                            <ModalLogout />
                             <div className="h-2"></div>
                             {menuHead.map((item: any, id: number) => (
                                 <div key={id}>
@@ -112,4 +109,4 @@ const ProfileMenu = () => {
     );
 };
 
-export default ProfileMenu;
+export default MobileMenu;

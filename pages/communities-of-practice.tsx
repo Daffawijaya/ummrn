@@ -17,18 +17,13 @@ export default function CommunitiesofPractice() {
       </Head>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
-      <Navbar setSearch={setSearch} />
+        <Navbar setSearch={setSearch} />
 
         {/* content */}
-        <div className='flex flex-col items-center justify-center lg:pt-[140px] pt-[80px]'>
+        <div className='flex flex-col items-center'>
           <div className='w-full'>
-            <div className='py-20 bg-background-10 shadow-inner-lg '>
-              <h1 className='text-5xl font-bold t mx-auto px-4 xl:px-20 2xl:px-32 container'>Communities of Practice</h1>
-            </div>
-            <div className='pt-4 container mx-auto px-4 xl:px-20 2xl:px-32'>
-              <div className='w-full flex justify-center'>
-                <Search setSearch={setSearch} />
-              </div>
+            <h1 className='text-6xl pb-12 pt-10 font-bold text-center mx-auto px-4 xl:px-20 2xl:px-32 container uppercase'>Researches</h1>
+            <div className='container mx-auto px-4 xl:px-20 2xl:px-32'>
               <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4'>
                 {dataCop.filter((user: any) => user.title.toLowerCase().includes(search)
                 ).map((user: any, idx: number) => (
