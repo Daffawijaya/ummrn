@@ -23,7 +23,7 @@ export default function Projects() {
       </div>
 
       <div className="z-50 relative min-h-screen min-w-screen flex flex-col">
-        <Navbar />
+      <Navbar setSearch={setSearch} />
 
         {/* content */}
         <div className='flex flex-col items-center'>

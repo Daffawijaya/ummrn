@@ -21,7 +21,7 @@ export default function CallForProjects() {
       </div>
 
       <div className="relative z-10 min-h-screen min-w-screen flex flex-col">
-        <Navbar />
+      <Navbar setSearch={setSearch} />
 
         {/* content */}
         <div className='flex flex-col items-center'>
