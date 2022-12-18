@@ -1,38 +1,38 @@
 import Head from 'next/head'
 import Navbar from '../components/Navbar';
-import FooterHome from '../components/FooterHome';
+import Link from 'next/link';
 
 const menuUpper = [
   {
-      title: "DASHBOARD",
-      url: "/home"
+    title: "DASHBOARD",
+    url: "/home"
   },
   {
-      title: "NOTIFICATION",
-      url: "/notification"
+    title: "NOTIFICATION",
+    url: "/notification"
   },
   {
-      title: "PROFILE",
-      url: "/profile"
+    title: "PROFILE",
+    url: "/profile"
   },
 ]
 
 const menuLeft = [
   {
-      title: "RESEARCHERS",
-      url: "/researches"
+    title: "RESEARCHERS",
+    url: "/researches"
   },
   {
-      title: "COP",
-      url: "/communities-of-practice"
+    title: "COP",
+    url: "/communities-of-practice"
   },
   {
-      title: "PROJECTS",
-      url: "/projects"
+    title: "PROJECTS",
+    url: "/projects"
   },
   {
-      title: "CFP",
-      url: "/call-for-projects"
+    title: "CFP",
+    url: "/call-for-projects"
   },
 ]
 
@@ -62,9 +62,11 @@ export default function Home() {
           <h3 className="text-lg sm:text-xl font-medium">
             YOUR RESEARCH OPPORTUNITIES
           </h3>
-          <button className='rounded-md hover:scale-[102%] mt-10 pt-4 pb-3 px-5 bg-white text-black font-semibold hover:text-white hover:bg-black duration-300 border-white border border-2 hover:border-white'>
-            PUSAT BANTUAN
-          </button>
+          <Link href={'http://wa.me/6281928704503'}>
+            <button className='mt-10 rounded-md hover:scale-[102%] pt-4 pb-3 w-32 bg-white text-black font-semibold hover:text-white hover:bg-black duration-300 border-white border border-2 hover:border-white'>
+              PUSAT BANTUAN
+            </button>
+          </Link>
         </div>
 
         <div></div>

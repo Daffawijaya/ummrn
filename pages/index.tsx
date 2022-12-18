@@ -29,9 +29,11 @@ export default function Home() {
             YOUR RESEARCH OPPORTUNITIES
           </h3>
           <div className='mt-10 flex space-x-4 justify-center'>
-            <button className='rounded-md hover:scale-[102%] pt-4 pb-3 w-32 bg-white text-black font-semibold hover:text-white hover:bg-black duration-300 border-white border border-2 hover:border-white'>
-              PUSAT BANTUAN
-            </button>
+            <Link href={'http://wa.me/6281928704503'}>
+              <button className='rounded-md hover:scale-[102%] pt-4 pb-3 w-32 bg-white text-black font-semibold hover:text-white hover:bg-black duration-300 border-white border border-2 hover:border-white'>
+                PUSAT BANTUAN
+              </button>
+            </Link>
             <Link href={'/login'}>
               <button className='rounded-md hover:scale-[102%] pt-4 pb-3 w-32 bg-white text-black font-semibold hover:text-white hover:bg-black duration-300 border-white border border-2 hover:border-white'>
                 SIGN IN

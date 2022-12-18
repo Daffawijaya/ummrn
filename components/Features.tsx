@@ -41,7 +41,7 @@ const Features = () => {
                             {features.map((item: any, id: number) => (
                                 <div key={id}>
                                     <Link href={item.url}
-                                        className={`font-medium text-xl capitalize duration-300 ${router.pathname === item.url
+                                        className={`font-medium text-xl capitalize duration-300 ${router.pathname.includes(item.url)
                                             ? "text-black hover:text-black duration-300 hover:translate-x-1 block"
                                             : "text-gray-400 hover:text-black duration-300 hover:translate-x-1 block"}`}>
                                         {item.title}

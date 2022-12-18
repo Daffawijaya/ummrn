@@ -5,15 +5,16 @@ import Footer from '../../components/Footer'
 import Link from 'next/link'
 import { useState } from 'react';
 import { dataResearches } from '../../data/data'
+import { useRouter } from "next/router";
 
 export default function Researches() {
-
+    const router = useRouter();
     const [search, setSearch] = useState("")
-
+    const { pid } = router.query
     return (
         <>
             <Head>
-                <title>UMMRN | Researchers</title>
+                <title>UMMRN | {pid} </title>
                 <link rel="icon" href="/fav.png" />
             </Head>
 

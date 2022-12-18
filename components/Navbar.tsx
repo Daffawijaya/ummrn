@@ -50,7 +50,7 @@ const Navbar = ({ setSearch }: dataProps) => {
                             <div><Features /></div>
                         </div>
                         <button className="flex items-center h-8">
-                            <Image alt='anjay' src={'/logo-um.png'} height={800} width={800} className="hover:scale-[103%] duration-300 w-full h-full" />
+                            <Image alt='anjay' src={'/logo-um.png'} height={200} width={400} className="hover:scale-[103%] duration-300 w-full h-full" />
                         </button>
                         <div className='lg:hidden pt-5'><MobileMenu /></div>
                         <div className='flex pt-5 space-x-10 ml-[4%] lg:ml-0'>
