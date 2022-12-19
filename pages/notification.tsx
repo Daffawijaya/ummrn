@@ -12,10 +12,10 @@ export default function Notification() {
                 <title>UMMRN | Notification</title>
                 <link rel="icon" href="/fav.png" />
             </Head>
-            <div className="z-0 absolute h-screen w-screen bg-[url('/anj.jpg')] bg-cover ">
-        <div className='absolute inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-70 bg-white' />
-        <div className='absolute inset-0 z-30 w-screen flex items-center justify-center h-screen bg-gradient-to-t from-white' />
-      </div>
+            <div className="z-0 absolute h-screen w-[100%] bg-[url('/anj.jpg')] bg-cover ">
+                <div className='absolute inset-0 z-40 w-[100%] flex items-center justify-center h-screen bg-opacity-70 bg-white' />
+                <div className='absolute inset-0 z-30 w-[100%] flex items-center justify-center h-screen bg-gradient-to-t from-white' />
+            </div>
             <div className="min-h-screen min-w-screen flex flex-col relative z-10">
                 <Navbar />
 

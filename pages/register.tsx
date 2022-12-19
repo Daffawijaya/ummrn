@@ -14,9 +14,9 @@ export default function Register() {
                 <title>UMMRN | Register</title>
                 <link rel="icon" href="/fav.png" />
             </Head>
-            <div className="z-0 fixed h-screen w-screen bg-[url('/anj.jpg')] bg-cover ">
-                <div className='fixed inset-0 z-40 w-screen flex items-center justify-center h-screen bg-opacity-50 bg-black' />
-            </div>
+            <div className="z-0 fixed h-screen w-[100%] bg-[url('/anj.jpg')] bg-cover ">
+        <div className='fixed inset-0 z-40 w-[100%] flex items-center justify-center h-screen bg-opacity-50 bg-black' />
+      </div>
 
             <div className="z-50 relative h-screen w-screen">
                 <div className='flex flex-col h-full'>
