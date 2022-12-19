@@ -3,8 +3,8 @@ import Navbar from '../../components/Navbar'
 import Image from 'next/image'
 import Footer from '../../components/Footer'
 import Link from 'next/link'
-import { useState, useEffect } from 'react';
 import { dataResearches } from '../../data/data'
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Loading from '../../components/Loading'
 
@@ -35,6 +35,7 @@ export default function Researches() {
                 <title>UMMRN | Researchers </title>
                 <link rel="icon" href="/fav.png" />
             </Head>
+
             <div className="z-0 absolute h-screen w-[100%] bg-[url('/anj.jpg')] bg-cover ">
                 <div className='absolute inset-0 z-40 w-[100%] flex items-center justify-center h-screen bg-opacity-70 bg-white' />
                 <div className='absolute inset-0 z-30 w-[100%] flex items-center justify-center h-screen bg-gradient-to-t from-white' />
@@ -97,7 +98,6 @@ export default function Researches() {
                                             ))}
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                             <Footer />

@@ -7,6 +7,6 @@ module.exports = nextConfig
 
 module.exports = {
   images: {
-    domains: ['cloudflare-ipfs.com']
+    domains: ['cloudflare-ipfs.com', 'loremflickr.com']
   },
 }
