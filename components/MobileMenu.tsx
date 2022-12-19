@@ -64,43 +64,52 @@ const MobileMenu = () => {
                 </button>
 
                 {showOptions && (
-                    <div onClick={handleClick} className="absolute inset-x-0 text-center bg-white border-t py-5 rounded-b-lg">
-                        <div onClick={(event) => event.stopPropagation()} className="w-full space-y-2">
-                            {menuBottom.map((item: any, id: number) => (
-                                <div key={id}>
-                                    <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                    <div onClick={handleClick} className="absolute inset-x-0 text-center bg-white border-t py-5 rounded-b-lg shadow-lg">
+                        <div onClick={(event) => event.stopPropagation()} className="">
+                            <div className="space-y-2">
+                                {menuBottom.map((item: any, id: number) => (
+                                    <div key={id}>
+                                        <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
                                      ${router.pathname === item.url
-                                            ? "text-red-600 "
-                                            : "text-black hover:text-red-600"}
+                                                ? "text-red-600 "
+                                                : "text-black hover:text-red-600"}
                                  `}>
-                                        {item.title}
-                                    </Link>
-                                </div>
-                            ))}
-                            <ModalLogout />
-                            <div className="h-2"></div>
-                            {menuHead.map((item: any, id: number) => (
-                                <div key={id}>
-                                    <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                                            {item.title}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="py-2">
+                                <ModalLogout />
+                            </div>
+
+                            <div className="h-2 py-2"></div>
+
+                            <div className="space-y-2">
+                                {menuHead.map((item: any, id: number) => (
+                                    <div key={id}>
+                                        <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
                                      ${router.pathname === item.url
-                                            ? "text-red-600 "
-                                            : "text-black hover:text-red-600"}
+                                                ? "text-red-600 "
+                                                : "text-black hover:text-red-600"}
                                  `}>
-                                        {item.title}
-                                    </Link>
-                                </div>
-                            ))}
-                            {menuBody.map((item: any, id: number) => (
-                                <div key={id}>
-                                    <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
+                                            {item.title}
+                                        </Link>
+                                    </div>
+                                ))}
+                                {menuBody.map((item: any, id: number) => (
+                                    <div key={id}>
+                                        <Link href={item.url} className={`font-medium text-xl capitalize duration-300 hover:translate-x-1
                                      ${router.pathname === item.url
-                                            ? "text-red-600 "
-                                            : "text-black hover:text-red-600"}
+                                                ? "text-red-600 "
+                                                : "text-black hover:text-red-600"}
                                  `}>
-                                        {item.title}
-                                    </Link>
-                                </div>
-                            ))}
+                                            {item.title}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 )}
