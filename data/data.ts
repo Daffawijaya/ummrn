@@ -109,42 +109,42 @@ export const dataResearches = [
         depart: "Informatics Engineering",
         nim: "201910370311106"
     },
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa3.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy2.png",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy3.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa4.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
-    {
-        name: "Cindy Patika Sari",
-        url: "/cindy4.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311106"
-    },
-    {
-        name: "Daffa Wijaya",
-        url: "/daffa2.jpeg",
-        depart: "Informatics Engineering",
-        nim: "201910370311125"
-    },
+    // {
+    //     name: "Daffa Wijaya",
+    //     url: "/daffa3.jpeg",
+    //     depart: "Informatics Engineering",
+    //     nim: "201910370311125"
+    // },
+    // {
+    //     name: "Cindy Patika Sari",
+    //     url: "/cindy2.png",
+    //     depart: "Informatics Engineering",
+    //     nim: "201910370311106"
+    // },
+    // {
+    //     name: "Cindy Patika Sari",
+    //     url: "/cindy3.jpeg",
+    //     depart: "Informatics Engineering",
+    //     nim: "201910370311106"
+    // },
+    // {
+    //     name: "Daffa Wijaya",
+    //     url: "/daffa4.jpeg",
+    //     depart: "Informatics Engineering",
+    //     nim: "201910370311125"
+    // },
+    // {
+    //     name: "Cindy Patika Sari",
+    //     url: "/cindy4.jpeg",
+    //     depart: "Informatics Engineering",
+    //     nim: "201910370311106"
+    // },
+    // {
+    //     name: "Daffa Wijaya",
+    //     url: "/daffa2.jpeg",
+    //     depart: "Informatics Engineering",
+    //     nim: "201910370311125"
+    // },
 ]
 
 export const dataCop = [
