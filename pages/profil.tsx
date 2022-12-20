@@ -43,17 +43,45 @@ export default function Profil() {
                                         </button>
                                     </div>
                                     <div className='space-y-1 md:w-auto w-full'>
-                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Education:</h1>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Username</h1>
                                         <div>
-                                            <p>2011-2013 Master in Informatics (M.Kom) - Modeling and prototyping the Knowledge Management System on the higher education environment</p>
-                                            <p>2005-2009 Bachelor in Informatics (S.Kom) - Designing a clustering (High Availability) server on the intranet</p>
+                                            <p>cindypatikasari</p>
+                                        </div>
+                                    </div>
+                                    <div className='space-y-1 md:w-auto w-full'>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Phone</h1>
+                                        <div>
+                                            <p>08827168966</p>
+                                        </div>
+                                    </div>
+                                    <div className='space-y-1 md:w-auto w-full'>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Email</h1>
+                                        <div>
+                                            <p>cindypatikasari@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div className='space-y-1 md:w-auto w-full'>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>NIM</h1>
+                                        <div>
+                                            <p>201910370311106</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
-                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Teaching Experinces:</h1>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Major:</h1>
                                         <div>
-                                            <p>Database Design</p>
+                                            <p>Informatics Engineering</p>
+                                        </div>
+                                    </div>
+                                    <div className='space-y-1'>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Interest:</h1>
+                                        <div>
                                             <p>Software Engineering</p>
+                                        </div>
+                                    </div>
+                                    <div className='space-y-1'>
+                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Semester:</h1>
+                                        <div>
+                                            <p>7</p>
                                         </div>
                                     </div>
                                     <div className='space-y-1'>
@@ -68,26 +96,6 @@ export default function Profil() {
                                         <div>
                                             <p>Frontend Web Developer</p>
                                             <p>Javascript</p>
-                                        </div>
-                                    </div>
-                                    <div className='space-y-1'>
-                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Awards:</h1>
-                                        <div>
-                                            <p>Wanita Tercantik Bagi Saya</p>
-                                        </div>
-                                    </div>
-                                    <div className='space-y-1'>
-                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Topics of Research:</h1>
-                                        <div>
-                                            <p>Project Management</p>
-                                            <p>UI/UX Design</p>
-                                        </div>
-                                    </div>
-                                    <div className='space-y-1'>
-                                        <h1 className='text-lg font-bold text-gray-800 uppercase'>Publications:</h1>
-                                        <div>
-                                            <p>[1] I. Nuryasin, Y. Prayudi, and T. Dirgahayu, “Prototype of Knowledge Management System for the Higher Education Institution in Indonesia,” Semin. Nas. Apl. Tenologi Inf., pp. 6–12, 2013.</p>
-                                            <p>[2] I. Nuryasin, “Model Communities of Practice (CoP) Pada Kelas Paralel di Jurusan Teknik Informatika, Universitas Muhammadmiyah Malang,” Semin. Nas. Teknol. dan Rekayasa, vol. 2, pp. v78–v82, 2016.</p>
                                         </div>
                                     </div>
                                     <button className='md:hidden rounded-md hover:scale-[102%] pt-2 pb-1 px-5 bg-blue-800 text-white font-medium hover:text-white hover:bg-blue-900 duration-300 border-white border border-2 hover:border-white'>

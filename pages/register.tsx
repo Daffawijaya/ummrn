@@ -15,10 +15,10 @@ export default function Register() {
                 <link rel="icon" href="/fav.png" />
             </Head>
             <div className="z-0 fixed h-screen w-[100%] bg-[url('/anj.jpg')] bg-cover ">
-        <div className='fixed inset-0 z-40 w-[100%] flex items-center justify-center h-screen bg-opacity-50 bg-black' />
-      </div>
+                <div className='fixed inset-0 z-40 w-[100%] flex items-center justify-center h-screen bg-opacity-50 bg-black' />
+            </div>
 
-            <div className="z-50 relative h-screen w-screen">
+            <div className="z-50 relative h-screen w-[100%]">
                 <div className='flex flex-col h-full'>
 
                     <div className="py-10 min-w-[300px] text-white text-center flex flex-col items-center">
